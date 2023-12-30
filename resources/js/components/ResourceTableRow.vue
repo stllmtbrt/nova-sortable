@@ -53,15 +53,17 @@
       }"
       class="dark:bg-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900"
     >
-      <component
-        :is="'index-' + field.component"
-        :class="`text-${field.textAlign}`"
-        :field="field"
-        :resource="resource"
-        :resource-name="resourceName"
-        :via-resource="viaResource"
-        :via-resource-id="viaResourceId"
-      />
+      <a :class="field.uniqueKey" :href="$url(`/resources/${resourceName}/${resource['id'].value}`)">
+        <component
+          :is="'index-' + field.component"
+          :class="`text-${field.textAlign}`"
+          :field="field"
+          :resource="resource"
+          :resource-name="resourceName"
+          :via-resource="viaResource"
+          :via-resource-id="viaResourceId"
+        />
+      </a>
     </td>
 
     <td

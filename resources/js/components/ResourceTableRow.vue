@@ -7,7 +7,6 @@
       'o1-divide-x divide-gray-100 dark:divide-gray-700':
         shouldShowColumnBorders,
     }"
-    @click.stop.prevent="navigateToDetail"
   >
     <!-- Resource Selection Checkbox -->
     <td
